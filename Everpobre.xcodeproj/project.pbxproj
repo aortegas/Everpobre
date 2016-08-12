@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3E13E8C1D5C89E90007A68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13E8B1D5C89E90007A68C /* main.m */; };
+		D3E13E8F1D5C89E90007A68C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13E8E1D5C89E90007A68C /* AppDelegate.m */; };
+		D3E13E971D5C89E90007A68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E13E961D5C89E90007A68C /* Assets.xcassets */; };
+		D3E13E9A1D5C89E90007A68C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E13E981D5C89E90007A68C /* LaunchScreen.storyboard */; };
+		D3E13EB21D5C8CB00007A68C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EB01D5C8CB00007A68C /* Model.xcdatamodeld */; };
+		D3E13EB51D5C8D980007A68C /* AOSSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EB41D5C8D980007A68C /* AOSSimpleCoreDataStack.m */; };
+		D3E13EC21D5C9D800007A68C /* _AOSNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EB71D5C9D800007A68C /* _AOSNamedEntity.m */; };
+		D3E13EC41D5C9D800007A68C /* _AOSNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EBB1D5C9D800007A68C /* _AOSNotebook.m */; };
+		D3E13EC51D5C9D800007A68C /* AOSNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EBD1D5C9D800007A68C /* AOSNamedEntity.m */; };
+		D3E13EC61D5C9D800007A68C /* AOSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EBF1D5C9D800007A68C /* AOSNote.m */; };
+		D3E13EC71D5C9D800007A68C /* AOSNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EC11D5C9D800007A68C /* AOSNotebook.m */; };
+		D3E13ECC1D5CC8230007A68C /* _AOSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13EC91D5CC8230007A68C /* _AOSNote.m */; };
+		D3E13ECD1D5CC8230007A68C /* AOSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13ECB1D5CC8230007A68C /* AOSPhoto.m */; };
+		D3E13ED01D5CC8350007A68C /* _AOSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13ECF1D5CC8350007A68C /* _AOSPhoto.m */; };
+		D3E13ED21D5E2FB20007A68C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D3E13ED11D5E2FB20007A68C /* .gitignore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D3E13E871D5C89E90007A68C /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3E13E8B1D5C89E90007A68C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3E13E8D1D5C89E90007A68C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D3E13E8E1D5C89E90007A68C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D3E13E961D5C89E90007A68C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3E13E991D5C89E90007A68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3E13E9B1D5C89E90007A68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3E13EB11D5C8CB00007A68C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D3E13EB31D5C8D980007A68C /* AOSSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSSimpleCoreDataStack.h; sourceTree = "<group>"; };
+		D3E13EB41D5C8D980007A68C /* AOSSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSSimpleCoreDataStack.m; sourceTree = "<group>"; };
+		D3E13EB61D5C9D800007A68C /* _AOSNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AOSNamedEntity.h; sourceTree = "<group>"; };
+		D3E13EB71D5C9D800007A68C /* _AOSNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AOSNamedEntity.m; sourceTree = "<group>"; };
+		D3E13EBA1D5C9D800007A68C /* _AOSNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AOSNotebook.h; sourceTree = "<group>"; };
+		D3E13EBB1D5C9D800007A68C /* _AOSNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AOSNotebook.m; sourceTree = "<group>"; };
+		D3E13EBC1D5C9D800007A68C /* AOSNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNamedEntity.h; sourceTree = "<group>"; };
+		D3E13EBD1D5C9D800007A68C /* AOSNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNamedEntity.m; sourceTree = "<group>"; };
+		D3E13EBE1D5C9D800007A68C /* AOSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNote.h; sourceTree = "<group>"; };
+		D3E13EBF1D5C9D800007A68C /* AOSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNote.m; sourceTree = "<group>"; };
+		D3E13EC01D5C9D800007A68C /* AOSNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotebook.h; sourceTree = "<group>"; };
+		D3E13EC11D5C9D800007A68C /* AOSNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotebook.m; sourceTree = "<group>"; };
+		D3E13EC81D5CC8230007A68C /* _AOSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AOSNote.h; sourceTree = "<group>"; };
+		D3E13EC91D5CC8230007A68C /* _AOSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AOSNote.m; sourceTree = "<group>"; };
+		D3E13ECA1D5CC8230007A68C /* AOSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSPhoto.h; sourceTree = "<group>"; };
+		D3E13ECB1D5CC8230007A68C /* AOSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSPhoto.m; sourceTree = "<group>"; };
+		D3E13ECE1D5CC8350007A68C /* _AOSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AOSPhoto.h; sourceTree = "<group>"; };
+		D3E13ECF1D5CC8350007A68C /* _AOSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AOSPhoto.m; sourceTree = "<group>"; };
+		D3E13ED11D5E2FB20007A68C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3E13E841D5C89E90007A68C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3E13E7E1D5C89E90007A68C = {
+			isa = PBXGroup;
+			children = (
+				D3E13E891D5C89E90007A68C /* Everpobre */,
+				D3E13E881D5C89E90007A68C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3E13E881D5C89E90007A68C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3E13E871D5C89E90007A68C /* Everpobre.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3E13E891D5C89E90007A68C /* Everpobre */ = {
+			isa = PBXGroup;
+			children = (
+				D3E13EA11D5C8A5E0007A68C /* Models */,
+				D3E13E8D1D5C89E90007A68C /* AppDelegate.h */,
+				D3E13E8E1D5C89E90007A68C /* AppDelegate.m */,
+				D3E13E961D5C89E90007A68C /* Assets.xcassets */,
+				D3E13E981D5C89E90007A68C /* LaunchScreen.storyboard */,
+				D3E13E9B1D5C89E90007A68C /* Info.plist */,
+				D3E13E8A1D5C89E90007A68C /* Supporting Files */,
+				D3E13ED11D5E2FB20007A68C /* .gitignore */,
+			);
+			path = Everpobre;
+			sourceTree = "<group>";
+		};
+		D3E13E8A1D5C89E90007A68C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3E13E8B1D5C89E90007A68C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3E13EA11D5C8A5E0007A68C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3E13EB61D5C9D800007A68C /* _AOSNamedEntity.h */,
+				D3E13EB71D5C9D800007A68C /* _AOSNamedEntity.m */,
+				D3E13EBA1D5C9D800007A68C /* _AOSNotebook.h */,
+				D3E13EBB1D5C9D800007A68C /* _AOSNotebook.m */,
+				D3E13EC81D5CC8230007A68C /* _AOSNote.h */,
+				D3E13EC91D5CC8230007A68C /* _AOSNote.m */,
+				D3E13ECE1D5CC8350007A68C /* _AOSPhoto.h */,
+				D3E13ECF1D5CC8350007A68C /* _AOSPhoto.m */,
+				D3E13EB31D5C8D980007A68C /* AOSSimpleCoreDataStack.h */,
+				D3E13EB41D5C8D980007A68C /* AOSSimpleCoreDataStack.m */,
+				D3E13EBC1D5C9D800007A68C /* AOSNamedEntity.h */,
+				D3E13EBD1D5C9D800007A68C /* AOSNamedEntity.m */,
+				D3E13EC01D5C9D800007A68C /* AOSNotebook.h */,
+				D3E13EC11D5C9D800007A68C /* AOSNotebook.m */,
+				D3E13EBE1D5C9D800007A68C /* AOSNote.h */,
+				D3E13EBF1D5C9D800007A68C /* AOSNote.m */,
+				D3E13ECA1D5CC8230007A68C /* AOSPhoto.h */,
+				D3E13ECB1D5CC8230007A68C /* AOSPhoto.m */,
+				D3E13EB01D5C8CB00007A68C /* Model.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3E13E861D5C89E90007A68C /* Everpobre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3E13E9E1D5C89E90007A68C /* Build configuration list for PBXNativeTarget "Everpobre" */;
+			buildPhases = (
+				D3E13E831D5C89E90007A68C /* Sources */,
+				D3E13E841D5C89E90007A68C /* Frameworks */,
+				D3E13E851D5C89E90007A68C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Everpobre;
+			productName = Everpobre;
+			productReference = D3E13E871D5C89E90007A68C /* Everpobre.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3E13E7F1D5C89E90007A68C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = aortegas.io;
+				TargetAttributes = {
+					D3E13E861D5C89E90007A68C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D3E13E821D5C89E90007A68C /* Build configuration list for PBXProject "Everpobre" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3E13E7E1D5C89E90007A68C;
+			productRefGroup = D3E13E881D5C89E90007A68C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3E13E861D5C89E90007A68C /* Everpobre */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3E13E851D5C89E90007A68C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3E13E9A1D5C89E90007A68C /* LaunchScreen.storyboard in Resources */,
+				D3E13ED21D5E2FB20007A68C /* .gitignore in Resources */,
+				D3E13E971D5C89E90007A68C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3E13E831D5C89E90007A68C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3E13EC51D5C9D800007A68C /* AOSNamedEntity.m in Sources */,
+				D3E13EC21D5C9D800007A68C /* _AOSNamedEntity.m in Sources */,
+				D3E13E8F1D5C89E90007A68C /* AppDelegate.m in Sources */,
+				D3E13ED01D5CC8350007A68C /* _AOSPhoto.m in Sources */,
+				D3E13ECC1D5CC8230007A68C /* _AOSNote.m in Sources */,
+				D3E13EC71D5C9D800007A68C /* AOSNotebook.m in Sources */,
+				D3E13ECD1D5CC8230007A68C /* AOSPhoto.m in Sources */,
+				D3E13EB51D5C8D980007A68C /* AOSSimpleCoreDataStack.m in Sources */,
+				D3E13EC41D5C9D800007A68C /* _AOSNotebook.m in Sources */,
+				D3E13E8C1D5C89E90007A68C /* main.m in Sources */,
+				D3E13EC61D5C9D800007A68C /* AOSNote.m in Sources */,
+				D3E13EB21D5C8CB00007A68C /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D3E13E981D5C89E90007A68C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3E13E991D5C89E90007A68C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3E13E9C1D5C89E90007A68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D3E13E9D1D5C89E90007A68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3E13E9F1D5C89E90007A68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Everpobre/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aortegas.Everpobre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D3E13EA01D5C89E90007A68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Everpobre/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.aortegas.Everpobre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3E13E821D5C89E90007A68C /* Build configuration list for PBXProject "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E13E9C1D5C89E90007A68C /* Debug */,
+				D3E13E9D1D5C89E90007A68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3E13E9E1D5C89E90007A68C /* Build configuration list for PBXNativeTarget "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E13E9F1D5C89E90007A68C /* Debug */,
+				D3E13EA01D5C89E90007A68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3E13EB01D5C8CB00007A68C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3E13EB11D5C8CB00007A68C /* Model.xcdatamodel */,
+			);
+			currentVersion = D3E13EB11D5C8CB00007A68C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D3E13E7F1D5C89E90007A68C /* Project object */;
+}
