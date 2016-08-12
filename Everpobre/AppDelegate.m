@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AOSSimpleCoreDataStack.h"
+#import "Settings.h"
 
 #import "AOSNotebook.h"
 #import "AOSNote.h"
@@ -24,6 +25,8 @@
     self.model = [AOSSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
     
     [self trastearConDatos];
+    
+    [self autoSave];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -59,6 +62,7 @@
 #pragma mark - Utils
 -(void) trastearConDatos{
     
+    // Crear
     AOSNotebook *libreta = [AOSNotebook notebookWithName:@"Libreta de prueba"
                                                  context:self.model.context];
     
@@ -66,10 +70,26 @@
                  noteBook:libreta
                   context:self.model.context];
     
-    [AOSNote noteWithName:@"Nota2"
-                 noteBook:libreta
-                  context:self.model.context];
+    AOSNote *note2 = [AOSNote noteWithName:@"Nota2"
+                                  noteBook:libreta
+                                   context:self.model.context];
 
+    // Buscar
+    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AOSNote entityName]];
+    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.name ascending:YES],
+                            [NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.modificationDate ascending:NO]];
+    NSError *error = nil;
+    NSArray *results = [self.model.context executeFetchRequest:req error:&error];
+    if (results == nil) {
+        NSLog(@"Error al buscar: %@", error);
+    } else {
+        NSLog(@"Results %@", results);
+    }
+    
+    // Eliminar
+    [self.model.context deleteObject:note2];
+    
+    // Guardar
     [self save];
     
     // Crear una nota
@@ -89,6 +109,16 @@
     [self.model saveWithErrorBlock:^(NSError *error) {
         NSLog(@"Error al guardar %s \n\n %@", __func__, error);
     }];
+}
+
+-(void) autoSave {
+    
+    if (AUTO_SAVE) {
+
+        NSLog(@"Autoguardando...");
+        [self save];
+        [self performSelector:@selector(autoSave) withObject:nil afterDelay:AUTO_SAVE_DELAY_IN_SECONDS];
+    }
 }
 
 @end

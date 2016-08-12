@@ -52,6 +52,7 @@
 		D3E13ECE1D5CC8350007A68C /* _AOSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AOSPhoto.h; sourceTree = "<group>"; };
 		D3E13ECF1D5CC8350007A68C /* _AOSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AOSPhoto.m; sourceTree = "<group>"; };
 		D3E13ED11D5E2FB20007A68C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D3E13ED31D5E3FB50007A68C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 				D3E13E9B1D5C89E90007A68C /* Info.plist */,
 				D3E13E8A1D5C89E90007A68C /* Supporting Files */,
 				D3E13ED11D5E2FB20007A68C /* .gitignore */,
+				D3E13ED31D5E3FB50007A68C /* Settings.h */,
 			);
 			path = Everpobre;
 			sourceTree = "<group>";
