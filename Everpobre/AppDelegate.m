@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AOSSimpleCoreDataStack.h"
 #import "Settings.h"
+#import "AOSNotebooksViewController.h"
 
 #import "AOSNotebook.h"
 #import "AOSNote.h"
@@ -24,11 +25,32 @@
     // Crear una instancia del stack de Core Data
     self.model = [AOSSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
     
-    [self trastearConDatos];
-    
+    // Creamos el modelo.
+    //[self trastearConDatos];
     [self autoSave];
     
+    // Creamos la Window.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    // Creamos un NSFetchRequest con sort descriptors.
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[AOSNotebook entityName]];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.modificationDate ascending:NO],
+                                     [NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.name ascending:YES]];
+    
+    // Creamos el NSFetchedResultsController.
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                               managedObjectContext:self.model.context
+                                                                                                 sectionNameKeyPath:nil
+                                                                                                          cacheName:nil];
+    // Creamos el vc.
+    AOSNotebooksViewController *notebooksVC = [[AOSNotebooksViewController alloc]
+                                               initWithFetchedResultsController:fetchedResultsController
+                                               style:UITableViewStylePlain];
+    
+    // Creamos el navigation controller.
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:notebooksVC];
+    
+    self.window.rootViewController = navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -60,49 +82,6 @@
 
 
 #pragma mark - Utils
--(void) trastearConDatos{
-    
-    // Crear
-    AOSNotebook *libreta = [AOSNotebook notebookWithName:@"Libreta de prueba"
-                                                 context:self.model.context];
-    
-    [AOSNote noteWithName:@"Nota1"
-                 noteBook:libreta
-                  context:self.model.context];
-    
-    AOSNote *note2 = [AOSNote noteWithName:@"Nota2"
-                                  noteBook:libreta
-                                   context:self.model.context];
-
-    // Buscar
-    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AOSNote entityName]];
-    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.name ascending:YES],
-                            [NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.modificationDate ascending:NO]];
-    NSError *error = nil;
-    NSArray *results = [self.model.context executeFetchRequest:req error:&error];
-    if (results == nil) {
-        NSLog(@"Error al buscar: %@", error);
-    } else {
-        NSLog(@"Results %@", results);
-    }
-    
-    // Eliminar
-    [self.model.context deleteObject:note2];
-    
-    // Guardar
-    [self save];
-    
-    // Crear una nota
-    //NSManagedObject *note = [NSEntityDescription insertNewObjectForEntityForName:@"Note"
-    //                                                      inManagedObjectContext:self.model.context];
-    
-    // Asignamos valores a las propiedads mediante KVC
-    //[note setValue:@"WWDC" forKey:@"name"];
-    //[note setValue:[NSDate date] forKey:@"creationDate"];
-    
-    //NSLog(@"%@", note);
-}
-
 -(void) save {
     
     // __func__ devolveria el nombre del metodo, es decir, AppDelegate save.
@@ -114,11 +93,54 @@
 -(void) autoSave {
     
     if (AUTO_SAVE) {
-
+        
         NSLog(@"Autoguardando...");
         [self save];
         [self performSelector:@selector(autoSave) withObject:nil afterDelay:AUTO_SAVE_DELAY_IN_SECONDS];
     }
+}
+
+-(void) trastearConDatos{
+    
+    // Crear
+    //AOSNotebook *libreta = [AOSNotebook notebookWithName:@"Libreta de prueba"
+    //                                             context:self.model.context];
+    
+    //[AOSNote noteWithName:@"Nota1"
+    //             noteBook:libreta
+    //              context:self.model.context];
+    
+    //[AOSNote noteWithName:@"Nota2"
+    //             noteBook:libreta
+    //              context:self.model.context];
+
+    // Buscar
+    //NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AOSNote entityName]];
+    //req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.name ascending:YES],
+    //                        [NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.modificationDate ascending:NO]];
+    //NSError *error = nil;
+    //NSArray *results = [self.model.context executeFetchRequest:req error:&error];
+    //if (results == nil) {
+    //    NSLog(@"Error al buscar: %@", error);
+    //} else {
+    //    NSLog(@"Results %@", results);
+    //}
+    
+    // Eliminar
+    //[self.model.context deleteObject:note2];
+    
+    // Guardar
+    //[self save];
+    
+    // Crear una nota
+    //NSManagedObject *note = [NSEntityDescription insertNewObjectForEntityForName:@"Note"
+    //                                                      inManagedObjectContext:self.model.context];
+    
+    // Asignamos valores a las propiedads mediante KVC
+    //[note setValue:@"WWDC" forKey:@"name"];
+    //[note setValue:[NSDate date] forKey:@"creationDate"];
+    
+    //NSLog(@"%@", note);
 }
 
 @end

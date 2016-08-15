@@ -22,6 +22,8 @@
 		D3E13ECD1D5CC8230007A68C /* AOSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13ECB1D5CC8230007A68C /* AOSPhoto.m */; };
 		D3E13ED01D5CC8350007A68C /* _AOSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13ECF1D5CC8350007A68C /* _AOSPhoto.m */; };
 		D3E13ED21D5E2FB20007A68C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D3E13ED11D5E2FB20007A68C /* .gitignore */; };
+		D3FFC3B31D620814000F82AF /* AOSCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FFC3B21D620814000F82AF /* AOSCoreDataTableViewController.m */; };
+		D3FFC3B71D620959000F82AF /* AOSNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FFC3B61D620959000F82AF /* AOSNotebooksViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,10 @@
 		D3E13ECF1D5CC8350007A68C /* _AOSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AOSPhoto.m; sourceTree = "<group>"; };
 		D3E13ED11D5E2FB20007A68C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D3E13ED31D5E3FB50007A68C /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		D3FFC3B11D620814000F82AF /* AOSCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSCoreDataTableViewController.h; sourceTree = "<group>"; };
+		D3FFC3B21D620814000F82AF /* AOSCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSCoreDataTableViewController.m; sourceTree = "<group>"; };
+		D3FFC3B51D620959000F82AF /* AOSNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotebooksViewController.h; sourceTree = "<group>"; };
+		D3FFC3B61D620959000F82AF /* AOSNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotebooksViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		D3E13E891D5C89E90007A68C /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				D3FFC3B41D620908000F82AF /* Controllers */,
 				D3E13EA11D5C8A5E0007A68C /* Models */,
 				D3E13E8D1D5C89E90007A68C /* AppDelegate.h */,
 				D3E13E8E1D5C89E90007A68C /* AppDelegate.m */,
@@ -130,6 +137,17 @@
 				D3E13EB01D5C8CB00007A68C /* Model.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D3FFC3B41D620908000F82AF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3FFC3B11D620814000F82AF /* AOSCoreDataTableViewController.h */,
+				D3FFC3B21D620814000F82AF /* AOSCoreDataTableViewController.m */,
+				D3FFC3B51D620959000F82AF /* AOSNotebooksViewController.h */,
+				D3FFC3B61D620959000F82AF /* AOSNotebooksViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +226,10 @@
 				D3E13ED01D5CC8350007A68C /* _AOSPhoto.m in Sources */,
 				D3E13ECC1D5CC8230007A68C /* _AOSNote.m in Sources */,
 				D3E13EC71D5C9D800007A68C /* AOSNotebook.m in Sources */,
+				D3FFC3B31D620814000F82AF /* AOSCoreDataTableViewController.m in Sources */,
 				D3E13ECD1D5CC8230007A68C /* AOSPhoto.m in Sources */,
 				D3E13EB51D5C8D980007A68C /* AOSSimpleCoreDataStack.m in Sources */,
+				D3FFC3B71D620959000F82AF /* AOSNotebooksViewController.m in Sources */,
 				D3E13EC41D5C9D800007A68C /* _AOSNotebook.m in Sources */,
 				D3E13E8C1D5C89E90007A68C /* main.m in Sources */,
 				D3E13EC61D5C9D800007A68C /* AOSNote.m in Sources */,
@@ -354,6 +374,7 @@
 				D3E13EA01D5C89E90007A68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -27,17 +27,21 @@
 
 
 #pragma mark - Methods
-- (NSManagedObjectContext *)context{
+- (NSManagedObjectContext *) context{
     
     if (_context == nil){
         _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         _context.persistentStoreCoordinator = self.storeCoordinator;
+        
+        // Añadimos el undo manager.
+        _context.undoManager = [[NSUndoManager alloc] init];
     }
+    
     return _context;
 }
 
-- (NSPersistentStoreCoordinator *)storeCoordinator
-{
+- (NSPersistentStoreCoordinator *) storeCoordinator {
+    
     if (_storeCoordinator == nil) {
         _storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.model];
         
@@ -63,8 +67,8 @@
     return _storeCoordinator;
 }
 
-- (NSManagedObjectModel *)model
-{
+- (NSManagedObjectModel *) model {
+    
     if (_model == nil) {
         _model = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.modelURL];
     }
@@ -74,19 +78,17 @@
 
 
 #pragma mark - Class Methods
-+ (NSString *)persistentStoreCoordinatorErrorNotificationName
-{
++ (NSString *) persistentStoreCoordinatorErrorNotificationName {
     return @"persistentStoreCoordinatorErrorNotificationName";
 }
 
 // Returns the URL to the application's Documents directory.
-+ (NSURL *)applicationDocumentsDirectory
-{
++ (NSURL *)applicationDocumentsDirectory {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-+ (AOSSimpleCoreDataStack *)coreDataStackWithModelName:(NSString *)aModelName databaseFilename:(NSString*) aDBName
-{
++ (AOSSimpleCoreDataStack *)coreDataStackWithModelName:(NSString *)aModelName databaseFilename:(NSString*) aDBName {
+    
     NSURL *url = nil;
     
     if (aDBName) {
@@ -96,25 +98,21 @@
         url = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:aModelName];
     }
     
-    return [self coreDataStackWithModelName:aModelName
-                                databaseURL:url];
+    return [self coreDataStackWithModelName:aModelName databaseURL:url];
 }
 
-+ (AOSSimpleCoreDataStack *)coreDataStackWithModelName:(NSString *)aModelName
-{
++ (AOSSimpleCoreDataStack *)coreDataStackWithModelName:(NSString *)aModelName {
     return [self coreDataStackWithModelName:aModelName databaseFilename:nil];
 }
 
-+ (AOSSimpleCoreDataStack *)coreDataStackWithModelName:(NSString *)aModelName databaseURL:(NSURL *)aDBURL
-{
++ (AOSSimpleCoreDataStack *)coreDataStackWithModelName:(NSString *)aModelName databaseURL:(NSURL *)aDBURL {
     return [[self alloc] initWithModelName:aModelName databaseURL:aDBURL];
 }
 
 
 #pragma mark - Init
-- (id)initWithModelName:(NSString *)aModelName
-            databaseURL:(NSURL *)aDBURL
-{
+- (id)initWithModelName:(NSString *)aModelName databaseURL:(NSURL *)aDBURL {
+    
     if (self = [super init]) {
         self.modelURL = [[NSBundle mainBundle] URLForResource:aModelName withExtension:@"momd"];
         self.dbURL = aDBURL;
@@ -125,14 +123,15 @@
 
 
 #pragma mark - Others
-- (void)zapAllData
-{
+- (void) zapAllData {
+    
     NSError *err = nil;
     for (NSPersistentStore *store in self.storeCoordinator.persistentStores) {
         if (![self.storeCoordinator removePersistentStore:store error:&err]) {
             NSLog(@"Error while removing store %@ from store coordinator %@", store, self.storeCoordinator);
         }
     }
+    
     if (![[NSFileManager defaultManager] removeItemAtURL:self.dbURL error:&err]) {
         NSLog(@"Error removing %@: %@", self.dbURL, err);
     }
@@ -148,9 +147,10 @@
     [self context]; // this will rebuild the stack
 }
 
-- (void)saveWithErrorBlock:(void(^)(NSError *error))errorBlock
-{
+- (void) saveWithErrorBlock:(void(^)(NSError *error))errorBlock {
+    
     NSError *err = nil;
+    
     // If a context is nil, saving it should also be considered an
     // error, as being nil might be the result of a previous error
     // while creating the db.
@@ -169,8 +169,8 @@
     }
 }
 
--(NSArray *)executeRequest:(NSFetchRequest *)request
-                 withError:(void(^)(NSError *error))errorBlock{
+-(NSArray *) executeRequest:(NSFetchRequest *)request
+                  withError:(void(^)(NSError *error))errorBlock {
     
     NSError *err = nil;
     NSArray *results = nil;
@@ -182,7 +182,7 @@
                                              @"Attempted to search a nil NSManagedObjectContext. This AOSSimpleCoreDataStack has no context - probably there was an earlier error trying to access the CoreData database file."}];
         errorBlock(err);
         
-    }else{
+    } else {
         
         results = [self.context executeFetchRequest:request
                                               error:&err];

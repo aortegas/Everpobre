@@ -15,6 +15,7 @@
     AOSNotebook *noteBook = [NSEntityDescription insertNewObjectForEntityForName:[AOSNotebook entityName]
                                                           inManagedObjectContext:context];
     
+    noteBook.name = name;
     noteBook.creationDate = [NSDate date];
     noteBook.modificationDate = [NSDate date];
     return noteBook;
