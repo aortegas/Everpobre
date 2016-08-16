@@ -8,6 +8,7 @@
 
 #import "AOSNotebooksViewController.h"
 #import "AOSNotebook.h"
+#import "AOSNotebookCellView.h"
 
 @interface AOSNotebooksViewController ()
 
@@ -40,6 +41,10 @@
         NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
         [notificationCenter addObserver:self selector:@selector(proximityStateDidChange:) name:UIDeviceProximityStateDidChangeNotification object:nil];
     }
+    
+    // Registramos el NIB de la celda personalizada.
+    UINib *cellNib = [UINib nibWithNibName:@"AOSNotebookCellView" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:[AOSNotebookCellView cellId]];
 }
 
 -(void) viewDidDisappear:(BOOL)animated {
@@ -73,28 +78,41 @@
     }
 }
 
--(UITableViewCell *) tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *cellId = @"cellId";
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    // Forma estandar.
+    //static NSString *cellId = @"cellId";
     
     // Averiguar el notebook.
     AOSNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // Crear una celda.
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-    }
+    // Forma estandar.
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    //if (cell == nil) {
+    //    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    //}
+    // Forma con celda personalizada.
+    AOSNotebookCellView *cell = [tableView dequeueReusableCellWithIdentifier:[AOSNotebookCellView cellId]];
     
     // Sincronizar modelo con vista.
-    cell.textLabel.text = notebook.name;
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-    cell.detailTextLabel.text = [dateFormatter stringFromDate:notebook.modificationDate];
+    // Forma estandar.
+    //cell.textLabel.text = notebook.name;
+    //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    //cell.detailTextLabel.text = [dateFormatter stringFromDate:notebook.modificationDate];
+    // Forma con celda personalizada.
+    cell.nameView.text = notebook.name;
+    cell.numberOfNotesView.text = [NSString stringWithFormat:@"%lu", (unsigned long)notebook.notes.count];
     
     // Devolver la celda.
     return cell;
+}
+
+
+#pragma mark - TableView Delegate
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [AOSNotebookCellView cellHeight];
 }
 
 

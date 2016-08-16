@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D392FE5E1D6359850013E498 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D392FE5D1D6359850013E498 /* UIViewController+Navigation.m */; };
+		D392FE611D635D820013E498 /* AOSNotebookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D392FE601D635D820013E498 /* AOSNotebookCellView.xib */; };
+		D392FE641D63609B0013E498 /* AOSNotebookCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D392FE631D63609B0013E498 /* AOSNotebookCellView.m */; };
 		D3E13E8C1D5C89E90007A68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13E8B1D5C89E90007A68C /* main.m */; };
 		D3E13E8F1D5C89E90007A68C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13E8E1D5C89E90007A68C /* AppDelegate.m */; };
 		D3E13E971D5C89E90007A68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E13E961D5C89E90007A68C /* Assets.xcassets */; };
@@ -27,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D392FE5C1D6359850013E498 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		D392FE5D1D6359850013E498 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		D392FE601D635D820013E498 /* AOSNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOSNotebookCellView.xib; sourceTree = "<group>"; };
+		D392FE621D63609B0013E498 /* AOSNotebookCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotebookCellView.h; sourceTree = "<group>"; };
+		D392FE631D63609B0013E498 /* AOSNotebookCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotebookCellView.m; sourceTree = "<group>"; };
 		D3E13E871D5C89E90007A68C /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E13E8B1D5C89E90007A68C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3E13E8D1D5C89E90007A68C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +80,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D392FE581D6358B20013E498 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D392FE5C1D6359850013E498 /* UIViewController+Navigation.h */,
+				D392FE5D1D6359850013E498 /* UIViewController+Navigation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		D392FE5F1D635D160013E498 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D392FE601D635D820013E498 /* AOSNotebookCellView.xib */,
+				D392FE621D63609B0013E498 /* AOSNotebookCellView.h */,
+				D392FE631D63609B0013E498 /* AOSNotebookCellView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		D3E13E7E1D5C89E90007A68C = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +118,8 @@
 		D3E13E891D5C89E90007A68C /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				D392FE5F1D635D160013E498 /* Views */,
+				D392FE581D6358B20013E498 /* Categories */,
 				D3FFC3B41D620908000F82AF /* Controllers */,
 				D3E13EA11D5C8A5E0007A68C /* Models */,
 				D3E13E8D1D5C89E90007A68C /* AppDelegate.h */,
@@ -210,6 +239,7 @@
 				D3E13E9A1D5C89E90007A68C /* LaunchScreen.storyboard in Resources */,
 				D3E13ED21D5E2FB20007A68C /* .gitignore in Resources */,
 				D3E13E971D5C89E90007A68C /* Assets.xcassets in Resources */,
+				D392FE611D635D820013E498 /* AOSNotebookCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D392FE5E1D6359850013E498 /* UIViewController+Navigation.m in Sources */,
 				D3E13EC51D5C9D800007A68C /* AOSNamedEntity.m in Sources */,
 				D3E13EC21D5C9D800007A68C /* _AOSNamedEntity.m in Sources */,
 				D3E13E8F1D5C89E90007A68C /* AppDelegate.m in Sources */,
@@ -234,6 +265,7 @@
 				D3E13E8C1D5C89E90007A68C /* main.m in Sources */,
 				D3E13EC61D5C9D800007A68C /* AOSNote.m in Sources */,
 				D3E13EB21D5C8CB00007A68C /* Model.xcdatamodeld in Sources */,
+				D392FE641D63609B0013E498 /* AOSNotebookCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

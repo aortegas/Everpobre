@@ -10,6 +10,7 @@
 #import "AOSSimpleCoreDataStack.h"
 #import "Settings.h"
 #import "AOSNotebooksViewController.h"
+#import "UIViewController+Navigation.h"
 
 #import "AOSNotebook.h"
 #import "AOSNote.h"
@@ -48,9 +49,12 @@
                                                style:UITableViewStylePlain];
     
     // Creamos el navigation controller.
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:notebooksVC];
+    //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:notebooksVC];
+    //self.window.rootViewController = navigationController;
     
-    self.window.rootViewController = navigationController;
+    // Utilizamos el metodo de la categoria.
+    self.window.rootViewController = [notebooksVC wrapperInNavigation];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

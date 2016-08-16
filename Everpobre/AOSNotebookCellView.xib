@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="z5l-6k-H7E" customClass="AOSNotebookCellView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z5l-6k-H7E" id="XiO-5t-qyu">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-pT-DvJ">
+                        <rect key="frame" x="252" y="0.0" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="3lm-2f-QPs"/>
+                            <constraint firstAttribute="width" constant="60" id="4DC-JK-fJw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo de la Notebook" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBf-NS-Pnr">
+                        <rect key="frame" x="20" y="0.0" width="227" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="PgO-d7-ILu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jCI-pT-DvJ" firstAttribute="top" secondItem="XiO-5t-qyu" secondAttribute="topMargin" constant="-8" id="7je-Zn-Mka"/>
+                    <constraint firstItem="HBf-NS-Pnr" firstAttribute="top" secondItem="XiO-5t-qyu" secondAttribute="topMargin" constant="-8" id="Usx-77-CZz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jCI-pT-DvJ" secondAttribute="trailing" id="V0D-Ot-jvg"/>
+                    <constraint firstItem="jCI-pT-DvJ" firstAttribute="leading" secondItem="HBf-NS-Pnr" secondAttribute="trailing" constant="5" id="cFG-eZ-ngI"/>
+                    <constraint firstItem="HBf-NS-Pnr" firstAttribute="leading" secondItem="XiO-5t-qyu" secondAttribute="leadingMargin" constant="12" id="pqM-t5-jSg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameView" destination="HBf-NS-Pnr" id="86F-sF-QvU"/>
+                <outlet property="numberOfNotesView" destination="jCI-pT-DvJ" id="AES-EL-Sg5"/>
+            </connections>
+            <point key="canvasLocation" x="302" y="161"/>
+        </tableViewCell>
+    </objects>
+</document>
