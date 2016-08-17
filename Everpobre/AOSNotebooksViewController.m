@@ -9,6 +9,7 @@
 #import "AOSNotebooksViewController.h"
 #import "AOSNotebook.h"
 #import "AOSNotebookCellView.h"
+#import "AOSNotesViewController.h"
 
 @interface AOSNotebooksViewController ()
 
@@ -113,6 +114,16 @@
 #pragma mark - TableView Delegate
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [AOSNotebookCellView cellHeight];
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // Creamos un objeto notebook, con la libreta seleccionada.
+    AOSNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    // Creamos el view controller de detalle en el que estaran todas las notas de esta libreta que le pasamos.
+    AOSNotesViewController *notesVC = [[AOSNotesViewController alloc] initWithNotebook:notebook];
+    // Ponemos el nuevo controlador en la navegacion.
+    [self.navigationController pushViewController:notesVC animated:YES];
 }
 
 

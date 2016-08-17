@@ -27,7 +27,7 @@
     self.model = [AOSSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
     
     // Creamos el modelo.
-    //[self trastearConDatos];
+    [self trastearConDatos];
     [self autoSave];
     
     // Creamos la Window.
@@ -107,16 +107,16 @@
 -(void) trastearConDatos{
     
     // Crear
-    //AOSNotebook *libreta = [AOSNotebook notebookWithName:@"Libreta de prueba"
-    //                                             context:self.model.context];
+    AOSNotebook *libreta = [AOSNotebook notebookWithName:@"Libreta de prueba"
+                                                 context:self.model.context];
     
-    //[AOSNote noteWithName:@"Nota1"
-    //             noteBook:libreta
-    //              context:self.model.context];
+    [AOSNote noteWithName:@"Nota1"
+                 noteBook:libreta
+                  context:self.model.context];
     
-    //[AOSNote noteWithName:@"Nota2"
-    //             noteBook:libreta
-    //              context:self.model.context];
+    [AOSNote noteWithName:@"Nota2"
+                 noteBook:libreta
+                  context:self.model.context];
 
     // Buscar
     //NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[AOSNote entityName]];
