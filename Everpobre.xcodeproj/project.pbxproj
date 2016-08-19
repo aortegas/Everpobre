@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D348AE9A1D662F5B0061787D /* AOSCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D348AE991D662F5B0061787D /* AOSCoreDataCollectionViewController.m */; };
+		D348AE9D1D662F670061787D /* AOSEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = D348AE9C1D662F670061787D /* AOSEntityObserver.m */; };
+		D348AE9F1D6634170061787D /* AOSNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D348AE9E1D6634170061787D /* AOSNoteCollectionViewCell.xib */; };
+		D348AEA21D6703E50061787D /* AOSNoteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D348AEA11D6703E50061787D /* AOSNoteCellView.m */; };
 		D392FE5E1D6359850013E498 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D392FE5D1D6359850013E498 /* UIViewController+Navigation.m */; };
 		D392FE611D635D820013E498 /* AOSNotebookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D392FE601D635D820013E498 /* AOSNotebookCellView.xib */; };
 		D392FE641D63609B0013E498 /* AOSNotebookCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D392FE631D63609B0013E498 /* AOSNotebookCellView.m */; };
-		D3CB747C1D64B24C008EDA68 /* AOSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CB747B1D64B24C008EDA68 /* AOSNotesViewController.m */; };
+		D3DEADDC1D671D8B00259768 /* AOSNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DEADDB1D671D8B00259768 /* AOSNotesTableViewController.m */; };
+		D3DEADDF1D671E5400259768 /* AOSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DEADDE1D671E5400259768 /* AOSNotesViewController.m */; };
 		D3E13E8C1D5C89E90007A68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13E8B1D5C89E90007A68C /* main.m */; };
 		D3E13E8F1D5C89E90007A68C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13E8E1D5C89E90007A68C /* AppDelegate.m */; };
 		D3E13E971D5C89E90007A68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E13E961D5C89E90007A68C /* Assets.xcassets */; };
@@ -31,13 +36,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D348AE981D662F5B0061787D /* AOSCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSCoreDataCollectionViewController.h; sourceTree = "<group>"; };
+		D348AE991D662F5B0061787D /* AOSCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSCoreDataCollectionViewController.m; sourceTree = "<group>"; };
+		D348AE9B1D662F670061787D /* AOSEntityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSEntityObserver.h; sourceTree = "<group>"; };
+		D348AE9C1D662F670061787D /* AOSEntityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSEntityObserver.m; sourceTree = "<group>"; };
+		D348AE9E1D6634170061787D /* AOSNoteCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOSNoteCollectionViewCell.xib; sourceTree = "<group>"; };
+		D348AEA01D6703E50061787D /* AOSNoteCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNoteCellView.h; sourceTree = "<group>"; };
+		D348AEA11D6703E50061787D /* AOSNoteCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNoteCellView.m; sourceTree = "<group>"; };
 		D392FE5C1D6359850013E498 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		D392FE5D1D6359850013E498 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 		D392FE601D635D820013E498 /* AOSNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOSNotebookCellView.xib; sourceTree = "<group>"; };
 		D392FE621D63609B0013E498 /* AOSNotebookCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotebookCellView.h; sourceTree = "<group>"; };
 		D392FE631D63609B0013E498 /* AOSNotebookCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotebookCellView.m; sourceTree = "<group>"; };
-		D3CB747A1D64B24C008EDA68 /* AOSNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotesViewController.h; sourceTree = "<group>"; };
-		D3CB747B1D64B24C008EDA68 /* AOSNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotesViewController.m; sourceTree = "<group>"; };
+		D3DEADDA1D671D8B00259768 /* AOSNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotesTableViewController.h; sourceTree = "<group>"; };
+		D3DEADDB1D671D8B00259768 /* AOSNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotesTableViewController.m; sourceTree = "<group>"; };
+		D3DEADDD1D671E5400259768 /* AOSNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotesViewController.h; sourceTree = "<group>"; };
+		D3DEADDE1D671E5400259768 /* AOSNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotesViewController.m; sourceTree = "<group>"; };
 		D3E13E871D5C89E90007A68C /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E13E8B1D5C89E90007A68C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3E13E8D1D5C89E90007A68C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +112,9 @@
 				D392FE601D635D820013E498 /* AOSNotebookCellView.xib */,
 				D392FE621D63609B0013E498 /* AOSNotebookCellView.h */,
 				D392FE631D63609B0013E498 /* AOSNotebookCellView.m */,
+				D348AE9E1D6634170061787D /* AOSNoteCollectionViewCell.xib */,
+				D348AEA01D6703E50061787D /* AOSNoteCellView.h */,
+				D348AEA11D6703E50061787D /* AOSNoteCellView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -148,6 +165,8 @@
 		D3E13EA11D5C8A5E0007A68C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D348AE9B1D662F670061787D /* AOSEntityObserver.h */,
+				D348AE9C1D662F670061787D /* AOSEntityObserver.m */,
 				D3E13EB61D5C9D800007A68C /* _AOSNamedEntity.h */,
 				D3E13EB71D5C9D800007A68C /* _AOSNamedEntity.m */,
 				D3E13EBA1D5C9D800007A68C /* _AOSNotebook.h */,
@@ -178,8 +197,12 @@
 				D3FFC3B21D620814000F82AF /* AOSCoreDataTableViewController.m */,
 				D3FFC3B51D620959000F82AF /* AOSNotebooksViewController.h */,
 				D3FFC3B61D620959000F82AF /* AOSNotebooksViewController.m */,
-				D3CB747A1D64B24C008EDA68 /* AOSNotesViewController.h */,
-				D3CB747B1D64B24C008EDA68 /* AOSNotesViewController.m */,
+				D348AE981D662F5B0061787D /* AOSCoreDataCollectionViewController.h */,
+				D348AE991D662F5B0061787D /* AOSCoreDataCollectionViewController.m */,
+				D3DEADDD1D671E5400259768 /* AOSNotesViewController.h */,
+				D3DEADDE1D671E5400259768 /* AOSNotesViewController.m */,
+				D3DEADDA1D671D8B00259768 /* AOSNotesTableViewController.h */,
+				D3DEADDB1D671D8B00259768 /* AOSNotesTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +268,7 @@
 				D3E13ED21D5E2FB20007A68C /* .gitignore in Resources */,
 				D3E13E971D5C89E90007A68C /* Assets.xcassets in Resources */,
 				D392FE611D635D820013E498 /* AOSNotebookCellView.xib in Resources */,
+				D348AE9F1D6634170061787D /* AOSNoteCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,17 +283,21 @@
 				D3E13EC51D5C9D800007A68C /* AOSNamedEntity.m in Sources */,
 				D3E13EC21D5C9D800007A68C /* _AOSNamedEntity.m in Sources */,
 				D3E13E8F1D5C89E90007A68C /* AppDelegate.m in Sources */,
-				D3CB747C1D64B24C008EDA68 /* AOSNotesViewController.m in Sources */,
+				D3DEADDC1D671D8B00259768 /* AOSNotesTableViewController.m in Sources */,
+				D348AEA21D6703E50061787D /* AOSNoteCellView.m in Sources */,
 				D3E13ED01D5CC8350007A68C /* _AOSPhoto.m in Sources */,
 				D3E13ECC1D5CC8230007A68C /* _AOSNote.m in Sources */,
 				D3E13EC71D5C9D800007A68C /* AOSNotebook.m in Sources */,
 				D3FFC3B31D620814000F82AF /* AOSCoreDataTableViewController.m in Sources */,
+				D348AE9A1D662F5B0061787D /* AOSCoreDataCollectionViewController.m in Sources */,
 				D3E13ECD1D5CC8230007A68C /* AOSPhoto.m in Sources */,
 				D3E13EB51D5C8D980007A68C /* AOSSimpleCoreDataStack.m in Sources */,
 				D3FFC3B71D620959000F82AF /* AOSNotebooksViewController.m in Sources */,
 				D3E13EC41D5C9D800007A68C /* _AOSNotebook.m in Sources */,
+				D3DEADDF1D671E5400259768 /* AOSNotesViewController.m in Sources */,
 				D3E13E8C1D5C89E90007A68C /* main.m in Sources */,
 				D3E13EC61D5C9D800007A68C /* AOSNote.m in Sources */,
+				D348AE9D1D662F670061787D /* AOSEntityObserver.m in Sources */,
 				D3E13EB21D5C8CB00007A68C /* Model.xcdatamodeld in Sources */,
 				D392FE641D63609B0013E498 /* AOSNotebookCellView.m in Sources */,
 			);

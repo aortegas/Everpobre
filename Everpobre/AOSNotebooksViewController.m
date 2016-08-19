@@ -10,6 +10,7 @@
 #import "AOSNotebook.h"
 #import "AOSNotebookCellView.h"
 #import "AOSNotesViewController.h"
+#import "AOSNote.h"
 
 @interface AOSNotebooksViewController ()
 
@@ -118,10 +119,40 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // Creamos el fetch request para obtener todas las notas de la libreta seleccionada aqui.
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[AOSNote entityName]];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.name ascending:YES],
+                                     [NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.modificationDate ascending:NO],
+                                     [NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.creationDate ascending:NO]];
+
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", [self.fetchedResultsController objectAtIndexPath:indexPath]];
+    
+    // Creamos el fetch result controller.
+    NSFetchedResultsController *fetchResultControllerNotes = [[NSFetchedResultsController alloc]
+                                                              initWithFetchRequest:fetchRequest
+                                                              managedObjectContext:self.fetchedResultsController.managedObjectContext
+                                                              sectionNameKeyPath:nil cacheName:nil];
+    
+    // Creamos el layout de las collections.
+    UICollectionViewFlowLayout *collectionViewFL = [[UICollectionViewFlowLayout alloc] init];
+    // Por defecto el scroll es vertical.
+    collectionViewFL.scrollDirection = UICollectionViewScrollDirectionVertical;
+    // Definimos el tamaño de la collection.
+    collectionViewFL.itemSize = CGSizeMake(140, 150);
+    // Definimos el espacio vertical minimo entre lineas.
+    collectionViewFL.minimumLineSpacing = 20;
+    // Definimos el espacio horizontal entre una collections.
+    collectionViewFL.minimumInteritemSpacing = 20;
+    // Definimos los margenes de la seccion.
+    collectionViewFL.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+    
     // Creamos un objeto notebook, con la libreta seleccionada.
-    AOSNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    //AOSNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
     // Creamos el view controller de detalle en el que estaran todas las notas de esta libreta que le pasamos.
-    AOSNotesViewController *notesVC = [[AOSNotesViewController alloc] initWithNotebook:notebook];
+    //AOSNotesViewController *notesVC = [[AOSNotesViewController alloc] initWithNotebook:notebook];
+    AOSNotesViewController *notesVC =[AOSNotesViewController coreDataCollectionViewControllerWithFetchedResultsController:fetchResultControllerNotes layout:collectionViewFL] ;
+    
     // Ponemos el nuevo controlador en la navegacion.
     [self.navigationController pushViewController:notesVC animated:YES];
 }

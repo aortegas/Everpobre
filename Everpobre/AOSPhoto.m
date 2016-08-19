@@ -8,7 +8,7 @@
 
 @implementation AOSPhoto
 
-//@synthesize image = _image;
+@synthesize image = _image;
 
 #pragma mark - Properties.
 -(void) setImage:(UIImage *)image {

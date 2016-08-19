@@ -2,79 +2,56 @@
 //  AOSNotesViewController.m
 //  Everpobre
 //
-//  Created by Alberto on 17/8/16.
+//  Created by Alberto on 19/8/16.
 //  Copyright © 2016 aortegas.io. All rights reserved.
 //
 
 #import "AOSNotesViewController.h"
-#import "AOSNotebook.h"
 #import "AOSNote.h"
+#import "AOSNoteCellView.h"
+#import "AOSPhoto.h"
 
+static NSString *cellId = @"NoteCellId";
 
 @interface AOSNotesViewController ()
-
-@property (strong, nonatomic) AOSNotebook *model;
 
 @end
 
 @implementation AOSNotesViewController
 
-#pragma mark - Init
--(id) initWithNotebook:(AOSNotebook *)notebook {
+#pragma mark - View Lifecycle
+-(void) viewWillAppear:(BOOL)animated {
+
+    [super viewWillAppear:animated];
+    [self registerNib];
     
-    // Creamos el fetchedResults.
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[AOSNote entityName]];
-    // Creamos un predicado y se lo asignamos al NSFetchRequest.
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"Notebook == %@", notebook];
-    // Añadimos la ordenacion por nombre de la nota.
-    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AOSNamedEntityAttributes.name ascending:YES]];
-    // Creamos un NSFetchResultController para trabajar con los datos obtenidos con el NSFetchRequest.
-    NSFetchedResultsController *fechedResultController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                                                                             managedObjectContext:notebook.managedObjectContext
-                                                                                               sectionNameKeyPath:nil
-                                                                                                        cacheName:nil];
-    // Le pasamos el NSFetchResultController a nuestra super clase para que con el, nos haga todo el trabajo.
-    if (self = [super initWithFetchedResultsController:fechedResultController style:UITableViewStylePlain]) {
-     
-        self.fetchedResultsController = fechedResultController;
-        self.model = notebook;
-        self.title = notebook.name;
-    }
-    
-    return self;
+    self.collectionView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
+    self.title = @"Notas";
 }
 
 
-#pragma mark - Life cycle
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+#pragma mark - Xib Registration
+-(void) registerNib {
+    
+    UINib *nib = [UINib nibWithNibName:@"AOSNoteCollectionViewCell" bundle:nil];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:cellId];
 }
 
 
 #pragma mark - Data Source
--(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Forma estandar.
-    static NSString *cellId = @"noteCell";
-    
-    // Averiguar la nota.
+    // Obtener el objeto
     AOSNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    // Crear una celda.
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-    }
+    // Obtener una collection
+    AOSNoteCellView *collection = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
     
-    // Sincronizar modelo con vista.
-    cell.textLabel.text = note.name;
+    // Configurar la celda
+    [collection observeNote:note];
     
-    // Devolver la celda.
-    return cell;
+    // Devolver la celda
+    return collection;
 }
 
 @end

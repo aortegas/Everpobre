@@ -107,15 +107,50 @@
 -(void) trastearConDatos{
     
     // Crear
-    AOSNotebook *libreta = [AOSNotebook notebookWithName:@"Libreta de prueba"
+    AOSNotebook *libreta1 = [AOSNotebook notebookWithName:@"Libreta de prueba1"
                                                  context:self.model.context];
     
     [AOSNote noteWithName:@"Nota1"
-                 noteBook:libreta
+                 noteBook:libreta1
                   context:self.model.context];
     
     [AOSNote noteWithName:@"Nota2"
-                 noteBook:libreta
+                 noteBook:libreta1
+                  context:self.model.context];
+
+    AOSNotebook *libreta2 = [AOSNotebook notebookWithName:@"Libreta de prueba2"
+                                                  context:self.model.context];
+
+    [AOSNote noteWithName:@"Nota1"
+                 noteBook:libreta2
+                  context:self.model.context];
+    
+    [AOSNote noteWithName:@"Nota2"
+                 noteBook:libreta2
+                  context:self.model.context];
+
+    [AOSNote noteWithName:@"Nota3"
+                 noteBook:libreta2
+                  context:self.model.context];
+    
+    [AOSNote noteWithName:@"Nota4"
+                 noteBook:libreta2
+                  context:self.model.context];
+
+    [AOSNote noteWithName:@"Nota5"
+                 noteBook:libreta2
+                  context:self.model.context];
+    
+    [AOSNote noteWithName:@"Nota6"
+                 noteBook:libreta2
+                  context:self.model.context];
+
+    [AOSNote noteWithName:@"Nota7"
+                 noteBook:libreta2
+                  context:self.model.context];
+    
+    [AOSNote noteWithName:@"Nota8"
+                 noteBook:libreta2
                   context:self.model.context];
 
     // Buscar
