@@ -7,7 +7,11 @@
 //
 
 #import "AOSCoreDataCollectionViewController.h"
+#import "AOSNoteViewController.h"
+@class AOSNotebook;
 
-@interface AOSNotesViewController : AOSCoreDataCollectionViewController
+@interface AOSNotesViewController : AOSCoreDataCollectionViewController <AOSBackToDelegateProtocol>
+
+@property (nonatomic, strong) AOSNotebook *notebook;
 
 @end

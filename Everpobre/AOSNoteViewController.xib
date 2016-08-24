@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AOSNoteViewController">
+            <connections>
+                <outlet property="mapView" destination="iSp-Nu-uMk" id="nxq-1y-Az6"/>
+                <outlet property="modificationDateView" destination="N4e-2O-kOv" id="Kfc-aO-8w6"/>
+                <outlet property="nameView" destination="4p4-s3-2KX" id="LHB-Me-hSb"/>
+                <outlet property="photoView" destination="PAj-1C-IHJ" id="2Wd-OB-cpi"/>
+                <outlet property="textView" destination="IJt-iq-WG7" id="3qM-WI-JTh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modification Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4e-2O-kOv">
+                    <rect key="frame" x="0.0" y="65" width="600" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MuM-J3-FMf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a note name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4p4-s3-2KX">
+                    <rect key="frame" x="8" y="105" width="584" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HOY-8e-cgu"/>
+                    </constraints>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PAj-1C-IHJ">
+                    <rect key="frame" x="8" y="163" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="aem-aD-95Z"/>
+                        <constraint firstAttribute="width" constant="150" id="eKg-G8-f6M"/>
+                    </constraints>
+                </imageView>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iSp-Nu-uMk">
+                    <rect key="frame" x="198" y="163" width="394" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="uMA-4J-bSf"/>
+                    </constraints>
+                </mapView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IJt-iq-WG7">
+                    <rect key="frame" x="0.0" y="328" width="600" height="272"/>
+                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="N4e-2O-kOv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4HD-Ke-shL"/>
+                <constraint firstItem="4p4-s3-2KX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7P6-to-u8p"/>
+                <constraint firstAttribute="trailing" secondItem="4p4-s3-2KX" secondAttribute="trailing" constant="8" id="BXy-fP-mG9"/>
+                <constraint firstItem="4p4-s3-2KX" firstAttribute="top" secondItem="N4e-2O-kOv" secondAttribute="bottom" constant="10" id="DBU-1V-Sac"/>
+                <constraint firstAttribute="trailing" secondItem="N4e-2O-kOv" secondAttribute="trailing" id="Gu0-ec-3aP"/>
+                <constraint firstItem="IJt-iq-WG7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LCn-bc-1cD"/>
+                <constraint firstAttribute="bottom" secondItem="IJt-iq-WG7" secondAttribute="bottom" id="P8Y-wA-jyK"/>
+                <constraint firstAttribute="trailing" secondItem="iSp-Nu-uMk" secondAttribute="trailing" constant="8" id="QgB-Ra-uRv"/>
+                <constraint firstAttribute="trailing" secondItem="IJt-iq-WG7" secondAttribute="trailing" id="R5e-TV-aol"/>
+                <constraint firstItem="N4e-2O-kOv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="RQh-vd-bzA"/>
+                <constraint firstItem="iSp-Nu-uMk" firstAttribute="leading" secondItem="PAj-1C-IHJ" secondAttribute="trailing" constant="40" id="Wr8-sX-Cd2"/>
+                <constraint firstItem="PAj-1C-IHJ" firstAttribute="top" secondItem="4p4-s3-2KX" secondAttribute="bottom" constant="8" id="YvB-zI-0Km"/>
+                <constraint firstItem="iSp-Nu-uMk" firstAttribute="top" secondItem="4p4-s3-2KX" secondAttribute="bottom" constant="8" id="g59-BX-1EY"/>
+                <constraint firstItem="IJt-iq-WG7" firstAttribute="top" secondItem="iSp-Nu-uMk" secondAttribute="bottom" constant="15" id="wur-6i-Fci"/>
+                <constraint firstItem="PAj-1C-IHJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="yOa-Im-Zr5"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="449" y="376"/>
+        </view>
+    </objects>
+</document>

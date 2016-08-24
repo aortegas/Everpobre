@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32C3FDA1D6B1383006117F0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32C3FD91D6B1383006117F0 /* MapKit.framework */; };
 		D348AE9A1D662F5B0061787D /* AOSCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D348AE991D662F5B0061787D /* AOSCoreDataCollectionViewController.m */; };
 		D348AE9D1D662F670061787D /* AOSEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = D348AE9C1D662F670061787D /* AOSEntityObserver.m */; };
 		D348AE9F1D6634170061787D /* AOSNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D348AE9E1D6634170061787D /* AOSNoteCollectionViewCell.xib */; };
@@ -14,6 +15,8 @@
 		D392FE5E1D6359850013E498 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D392FE5D1D6359850013E498 /* UIViewController+Navigation.m */; };
 		D392FE611D635D820013E498 /* AOSNotebookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D392FE601D635D820013E498 /* AOSNotebookCellView.xib */; };
 		D392FE641D63609B0013E498 /* AOSNotebookCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D392FE631D63609B0013E498 /* AOSNotebookCellView.m */; };
+		D39CBC221D6774A6005B899A /* AOSNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D39CBC201D6774A6005B899A /* AOSNoteViewController.m */; };
+		D39CBC231D6774A6005B899A /* AOSNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D39CBC211D6774A6005B899A /* AOSNoteViewController.xib */; };
 		D3DEADDC1D671D8B00259768 /* AOSNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DEADDB1D671D8B00259768 /* AOSNotesTableViewController.m */; };
 		D3DEADDF1D671E5400259768 /* AOSNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DEADDE1D671E5400259768 /* AOSNotesViewController.m */; };
 		D3E13E8C1D5C89E90007A68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E13E8B1D5C89E90007A68C /* main.m */; };
@@ -36,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D32C3FD91D6B1383006117F0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D32C3FDC1D6B1692006117F0 /* AOSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOSDetailViewController.h; sourceTree = "<group>"; };
 		D348AE981D662F5B0061787D /* AOSCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSCoreDataCollectionViewController.h; sourceTree = "<group>"; };
 		D348AE991D662F5B0061787D /* AOSCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSCoreDataCollectionViewController.m; sourceTree = "<group>"; };
 		D348AE9B1D662F670061787D /* AOSEntityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSEntityObserver.h; sourceTree = "<group>"; };
@@ -48,6 +53,9 @@
 		D392FE601D635D820013E498 /* AOSNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOSNotebookCellView.xib; sourceTree = "<group>"; };
 		D392FE621D63609B0013E498 /* AOSNotebookCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotebookCellView.h; sourceTree = "<group>"; };
 		D392FE631D63609B0013E498 /* AOSNotebookCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotebookCellView.m; sourceTree = "<group>"; };
+		D39CBC1F1D6774A6005B899A /* AOSNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNoteViewController.h; sourceTree = "<group>"; };
+		D39CBC201D6774A6005B899A /* AOSNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNoteViewController.m; sourceTree = "<group>"; };
+		D39CBC211D6774A6005B899A /* AOSNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AOSNoteViewController.xib; sourceTree = "<group>"; };
 		D3DEADDA1D671D8B00259768 /* AOSNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotesTableViewController.h; sourceTree = "<group>"; };
 		D3DEADDB1D671D8B00259768 /* AOSNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOSNotesTableViewController.m; sourceTree = "<group>"; };
 		D3DEADDD1D671E5400259768 /* AOSNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOSNotesViewController.h; sourceTree = "<group>"; };
@@ -91,12 +99,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32C3FDA1D6B1383006117F0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D32C3FDB1D6B1651006117F0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D32C3FDC1D6B1692006117F0 /* AOSDetailViewController.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		D392FE581D6358B20013E498 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +139,7 @@
 		D3E13E7E1D5C89E90007A68C = {
 			isa = PBXGroup;
 			children = (
+				D32C3FD91D6B1383006117F0 /* MapKit.framework */,
 				D3E13E891D5C89E90007A68C /* Everpobre */,
 				D3E13E881D5C89E90007A68C /* Products */,
 			);
@@ -138,6 +156,7 @@
 		D3E13E891D5C89E90007A68C /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				D32C3FDB1D6B1651006117F0 /* Protocols */,
 				D392FE5F1D635D160013E498 /* Views */,
 				D392FE581D6358B20013E498 /* Categories */,
 				D3FFC3B41D620908000F82AF /* Controllers */,
@@ -201,6 +220,9 @@
 				D348AE991D662F5B0061787D /* AOSCoreDataCollectionViewController.m */,
 				D3DEADDD1D671E5400259768 /* AOSNotesViewController.h */,
 				D3DEADDE1D671E5400259768 /* AOSNotesViewController.m */,
+				D39CBC1F1D6774A6005B899A /* AOSNoteViewController.h */,
+				D39CBC201D6774A6005B899A /* AOSNoteViewController.m */,
+				D39CBC211D6774A6005B899A /* AOSNoteViewController.xib */,
 				D3DEADDA1D671D8B00259768 /* AOSNotesTableViewController.h */,
 				D3DEADDB1D671D8B00259768 /* AOSNotesTableViewController.m */,
 			);
@@ -268,6 +290,7 @@
 				D3E13ED21D5E2FB20007A68C /* .gitignore in Resources */,
 				D3E13E971D5C89E90007A68C /* Assets.xcassets in Resources */,
 				D392FE611D635D820013E498 /* AOSNotebookCellView.xib in Resources */,
+				D39CBC231D6774A6005B899A /* AOSNoteViewController.xib in Resources */,
 				D348AE9F1D6634170061787D /* AOSNoteCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +314,7 @@
 				D3FFC3B31D620814000F82AF /* AOSCoreDataTableViewController.m in Sources */,
 				D348AE9A1D662F5B0061787D /* AOSCoreDataCollectionViewController.m in Sources */,
 				D3E13ECD1D5CC8230007A68C /* AOSPhoto.m in Sources */,
+				D39CBC221D6774A6005B899A /* AOSNoteViewController.m in Sources */,
 				D3E13EB51D5C8D980007A68C /* AOSSimpleCoreDataStack.m in Sources */,
 				D3FFC3B71D620959000F82AF /* AOSNotebooksViewController.m in Sources */,
 				D3E13EC41D5C9D800007A68C /* _AOSNotebook.m in Sources */,

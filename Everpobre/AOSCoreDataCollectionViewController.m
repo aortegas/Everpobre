@@ -7,8 +7,11 @@
 //
 
 #import "AOSCoreDataCollectionViewController.h"
+#import "AOSDetailViewController.h"
+#import "AOSNoteViewController.h"
 
 @interface AOSCoreDataCollectionViewController ()<NSFetchedResultsControllerDelegate>
+
 @property (strong, nonatomic) NSMutableArray *objectChanges;
 @property (strong, nonatomic) NSMutableArray *sectionChanges;
 
@@ -256,4 +259,20 @@
     }
     
 }
+
+#pragma mark - Delegate
+-(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSAssert(self.detailViewControllerClassName, @"You must set a detailViewController class name!");
+    
+    // Obtenemos el modelo
+    id detailModel = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Creamos el vc de detalle
+    UIViewController <AOSDetailViewController> *detailVC = [[NSClassFromString(self.detailViewControllerClassName) alloc] initWithModel:detailModel];
+    
+    // Hacemos el push
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
 @end

@@ -10,6 +10,8 @@
 #import "AOSNote.h"
 #import "AOSNoteCellView.h"
 #import "AOSPhoto.h"
+#import "AOSNoteViewController.h"
+#import "AOSNotebook.h"
 
 static NSString *cellId = @"NoteCellId";
 
@@ -27,6 +29,13 @@ static NSString *cellId = @"NoteCellId";
     
     self.collectionView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
     self.title = @"Notas";
+    
+    self.detailViewControllerClassName = NSStringFromClass([AOSNoteViewController class]);
+    
+    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                         target:self
+                                                                         action:@selector(addNewNote:)];
+    self.navigationItem.rightBarButtonItem = add;
 }
 
 
@@ -53,5 +62,34 @@ static NSString *cellId = @"NoteCellId";
     // Devolver la celda
     return collection;
 }
+
+
+#pragma mark - Utils
+-(void) addNewNote:(id)sender {
+    
+    AOSNoteViewController *newNoteVC = [[AOSNoteViewController alloc] initForNewNoteInNotebook:self.notebook];
+    [self.navigationController pushViewController:newNoteVC animated:YES];
+}
+
+
+#pragma mark - Delegate
+- (void) backToDelegate:(AOSNoteViewController *)vc {
+    [self.collectionView reloadData];
+}
+
+
+
+
+//-(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    // Obtener el objeto nota.
+//    AOSNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//
+//    // Crear el controlador de nota.
+//    AOSNoteViewController *noteVC = [[AOSNoteViewController alloc] initWithModel:note];
+//
+//    // Hacer un push.
+//    [self.navigationController pushViewController:noteVC animated:YES];
+//}
 
 @end

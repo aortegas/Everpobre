@@ -153,6 +153,8 @@
     //AOSNotesViewController *notesVC = [[AOSNotesViewController alloc] initWithNotebook:notebook];
     AOSNotesViewController *notesVC =[AOSNotesViewController coreDataCollectionViewControllerWithFetchedResultsController:fetchResultControllerNotes layout:collectionViewFL] ;
     
+    notesVC.notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
     // Ponemos el nuevo controlador en la navegacion.
     [self.navigationController pushViewController:notesVC animated:YES];
 }
