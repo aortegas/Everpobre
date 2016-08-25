@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AOSPhotoViewController">
+            <connections>
+                <outlet property="activityView" destination="ml9-1p-OZT" id="kw8-Du-hgM"/>
+                <outlet property="photoView" destination="pyd-0Y-pkP" id="JoX-5n-6M6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anF-er-Xyf">
+                    <rect key="frame" x="0.0" y="548" width="600" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="camera" id="Slb-9G-fyM">
+                            <connections>
+                                <action selector="takePhoto:" destination="-1" id="Bw9-gG-K0K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LoU-Od-B35"/>
+                        <barButtonItem title="Filters" id="Kbe-Gl-REf">
+                            <connections>
+                                <action selector="applyVintageEffect:" destination="-1" id="Coj-Og-PMb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Faces" id="Xpy-zo-Jsq">
+                            <connections>
+                                <action selector="zoomToFace:" destination="-1" id="IvM-yn-fnr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="TLu-Lg-7RO"/>
+                        <barButtonItem systemItem="trash" id="hCL-Ph-g5W">
+                            <connections>
+                                <action selector="deletePhoto:" destination="-1" id="eYG-Wa-hiU"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pyd-0Y-pkP">
+                    <rect key="frame" x="0.0" y="70" width="600" height="478"/>
+                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ml9-1p-OZT">
+                    <rect key="frame" x="281.5" y="281" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="anF-er-Xyf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4o8-GS-bg4"/>
+                <constraint firstAttribute="bottom" secondItem="anF-er-Xyf" secondAttribute="bottom" constant="8" id="6by-k9-H3Z"/>
+                <constraint firstItem="ml9-1p-OZT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6gv-zT-Eud"/>
+                <constraint firstAttribute="trailing" secondItem="pyd-0Y-pkP" secondAttribute="trailing" id="QC6-gj-N9i"/>
+                <constraint firstItem="pyd-0Y-pkP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="S7M-Sy-cY3"/>
+                <constraint firstAttribute="trailing" secondItem="anF-er-Xyf" secondAttribute="trailing" id="fiz-Mm-iIp"/>
+                <constraint firstItem="ml9-1p-OZT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sbM-xU-7iR"/>
+                <constraint firstItem="anF-er-Xyf" firstAttribute="top" secondItem="pyd-0Y-pkP" secondAttribute="bottom" id="uV8-W0-5fi"/>
+                <constraint firstItem="pyd-0Y-pkP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="y5a-RU-FTU"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="287" y="326"/>
+        </view>
+        <barButtonItem title="Item" id="ImY-Uf-jmX"/>
+    </objects>
+</document>

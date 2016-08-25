@@ -10,8 +10,10 @@
 #import "AOSNoteViewController.h"
 @class AOSNotebook;
 
-@interface AOSNotesViewController : AOSCoreDataCollectionViewController <AOSBackToDelegateProtocol>
+@interface AOSNotesViewController : AOSCoreDataCollectionViewController 
 
 @property (nonatomic, strong) AOSNotebook *notebook;
+
+-(void) back:(AOSNoteViewController *)vc;
 
 @end

@@ -10,6 +10,7 @@
 #import "AOSNote.h"
 #import "AOSPhoto.h"
 #import "AOSNotebook.h"
+#import "AOSPhotoViewController.h"
 
 @interface AOSNoteViewController () <UITextFieldDelegate>
 
@@ -74,6 +75,10 @@
                                                                                 action:@selector(cancel:)];
         self.navigationItem.rightBarButtonItem = cancel;
     }
+    
+    // Añadimos un gesture recognizer a la foto.
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(displayDetailPhoto:)];
+    [self.photoView addGestureRecognizer:tapGestureRecognizer];
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
@@ -93,6 +98,8 @@
     
     // Stop observing
     [self stopObservingKeyboard];
+    
+    //[[self presentingViewController] back:self];
 }
 
 
@@ -222,5 +229,20 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+
+#pragma mark - Acciones
+-(void) displayDetailPhoto:(id) sender {
+    
+    // Comprobamos antes, si tenemos foto para la nota. En caso de no tenerla, la creamos vacia.
+    if (self.model.photo == nil) {
+        self.model.photo = [AOSPhoto photoWithImage:nil context:self.model.managedObjectContext];
+    }
+
+    AOSPhotoViewController *photoVC = [[AOSPhotoViewController alloc] initWithModel:self.model.photo];
+    
+    [self.navigationController pushViewController:photoVC animated:YES];
+}
+
 
 @end

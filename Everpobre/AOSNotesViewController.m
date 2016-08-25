@@ -73,7 +73,7 @@ static NSString *cellId = @"NoteCellId";
 
 
 #pragma mark - Delegate
-- (void) backToDelegate:(AOSNoteViewController *)vc {
+- (void) back:(AOSNoteViewController *)vc {
     [self.collectionView reloadData];
 }
 
